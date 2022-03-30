@@ -1,0 +1,82 @@
+.brcrumb {
+    margin-bottom: 28px;
+    background-color: $primary;
+    padding: 20px 0;
+    &__list {
+        padding: 10px 0 15px 0;
+        &-item {
+            display: inline-block;
+            .item__links {
+                display: inline-block;
+                font-size: 14px;
+                line-height: 16px;
+                color: $white;
+            }
+        }
+    }
+    &__info {
+        padding-bottom: 18px;
+        &-title {
+            font-size: 32px;
+            line-height: 37px;
+            font-weight: 500;
+            color: $white;
+            margin-bottom: 4px;
+            @include max-breakpoint(991) {
+                font-size: 27px;
+            }
+            @include max-breakpoint(767) {
+                font-size: 22px;
+            }
+        }
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            .content__txt {
+                p {
+                    font-size: 14px;
+                    color: $white;
+                    margin-bottom: 0;
+                }
+            }
+            .content__btn {
+                @include max-breakpoint(991) {
+                    margin-top: 20px;
+                }
+                &-link {
+                    position: relative;
+                    width: 260px;
+                    height: 68px;
+                    display: inline-block;
+                    border-radius: 40px;
+                    @include max-breakpoint(991) {
+                        width: 250px;
+                        height: 60px;
+                    }
+                    &::after {
+                        content: "Đăng ký trở thành đối tác";
+                        position: absolute;
+                        background-color: $white;
+                        width: 249px;
+                        height: 57px;
+                        border-radius: 30px;
+                        display: inline-block;
+                        line-height: 57px;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        @include max-breakpoint(991) {
+                            width: 239px;
+                            height: 49px;
+                            line-height: 49px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

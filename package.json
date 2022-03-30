@@ -1,0 +1,37 @@
+{
+  "type": "module",
+  "name": "19clc-darklight-be",
+  "version": "1.0.0",
+  "description": "-   Python (Django)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/giaivi1403/19clc-darklight-be.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/giaivi1403/19clc-darklight-be/issues"
+  },
+  "homepage": "https://gitlab.com/giaivi1403/19clc-darklight-be#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap4-toggle": "^3.6.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "express-flash": "^0.0.2",
+    "express-handlebars": "^6.0.2",
+    "express-mysql-session": "^2.1.7",
+    "express-session": "^1.17.2",
+    "knex": "^0.95.15",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

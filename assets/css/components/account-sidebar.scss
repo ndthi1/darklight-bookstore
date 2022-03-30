@@ -1,0 +1,130 @@
+.sidebar {
+    .nav-tabs .nav-item {
+        margin-bottom: 0;
+    }
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    top: 57px;
+
+    .sidebar__user {
+        margin-bottom: 22px;
+
+        .user__photo {
+            margin-top: 0px;
+            margin-right: 14px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            border-radius: 50%;
+            border: 2px solid #f2f2f2;
+        }
+
+        .user__full-name {
+            line-height: 19px;
+            h5 {
+                color: #333333;
+            }
+            h6 {
+                color: #333333;
+            }
+        }
+    }
+    .sidebar__dashboard {
+        & .nav-tabs {
+            border-bottom: none;
+        }
+        .nav {
+            .nav-item {
+                .nav-line {
+                    height: 1px;
+                    background: #f2f2f2;
+                }
+                .nav-link {
+                    border: none;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 0.5rem 0;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    display: flex;
+                    align-items: center;
+
+                    /* Gray 3 */
+                    color: #828282;
+
+                    img {
+                        padding-right: 16px;
+                        border-radius: 0;
+                    }
+                }
+            }
+            .active {
+                .nav-link {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 16px;
+                    display: flex;
+                    align-items: center;
+
+                    /* Gray 1 */
+                    color: #333333;
+                }
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0px;
+    }
+    #main {
+        #faq {
+            .card {
+                border: none;
+                .card-body {
+                    ul {
+                        li {
+                            border-bottom: 1px solid #f2f2f2;
+                            padding: 0.5rem;
+                            margin: 5px 0;
+                            svg {
+                                margin-left: 20px;
+                            }
+                            p {
+                                margin-left: 16px;
+                            }
+                        }
+                        li:last-child {
+                            border-bottom: none;
+                        }
+                        li.active {
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .card-header {
+                    .btn-header-link {
+                        display: block;
+                        text-align: left;
+                        color: #828282;
+                        &:after {
+                            content: "\f107";
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 600;
+                            float: right;
+                            color: #828282;
+                        }
+                    }
+                    .btn-header-link.collapsed {
+                        &:after {
+                            content: "\f106";
+                            color: #828282;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

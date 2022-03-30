@@ -1,0 +1,114 @@
+@mixin hoverCategory {
+    & > .category-item:hover > .item,
+    & > .category-item.active > .item {
+        & > .item-icon path {
+            fill: $secondary !important;
+        }
+
+        & > .item-title {
+            color: $secondary;
+        }
+
+        & > .item-angle {
+            path {
+                fill: $secondary !important;
+            }
+        }
+    }
+
+    & > .category-item.active {
+        & > .item {
+            & > .item-angle {
+                transform: translateY(-50%) rotate(0);
+            }
+        }
+        & > .item-sub-category {
+            display: block;
+        }
+    }
+}
+
+.section-category {
+    position: relative;
+
+    &.account-sidebar {
+        .category-item {
+            padding: 15px 0 !important;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid $border-light;
+            }
+        }
+    }
+
+    .category-header {
+        margin-bottom: 20px;
+
+        .header-title {
+            font-size: 14px;
+            font-weight: 400;
+            color: $primary;
+            margin-bottom: 0;
+        }
+
+        img {
+            flex: 0 0 18px;
+            max-width: 18px;
+        }
+    }
+
+    .category-main {
+        @include hoverCategory;
+        &.see-more-wrapper {
+            &::before {
+                background: $white;
+                height: 20px;
+            }
+        }
+        .category-item {
+            position: relative;
+            padding: 10px 0;
+            cursor: pointer;
+
+            .item-sub-category {
+                margin-top: 15px;
+                padding-left: 15px;
+                @include hoverCategory;
+                display: none;
+            }
+
+            .item {
+                position: relative;
+
+                .item-icon {
+                    flex: 0 0 12px;
+                    max-width: 12px;
+                    margin-right: 5px;
+
+                    path {
+                        transition: 0.3s ease;
+                    }
+                }
+
+                .item-title {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $primary;
+                    transition: 0.3s ease;
+                }
+
+                .item-angle {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%) rotate(-90deg);
+                    width: 8px;
+                    transition: 0.3s ease;
+
+                    path {
+                        transition: 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}

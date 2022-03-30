@@ -1,0 +1,123 @@
+.my-account {
+    padding: 50px 0 200px;
+    .pl-13 {
+        padding-left: 13px;
+    }
+    @media (max-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .my-account-content {
+        padding-left: 13px;
+        background-color: $white;
+        border-radius: 5px;
+        padding: 30px 35px;
+        @media (max-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .content__heading {
+            margin-bottom: 24px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+
+            .form-input {
+                display: flex;
+                width: 100%;
+                height: 44px;
+                border: 1px solid #e1d6bf;
+                border-radius: 5px;
+
+                .form-control {
+                    width: 86%;
+                    height: 42px;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    border: none;
+                }
+
+                img {
+                    position: absolute;
+                    padding: 11px;
+                    text-align: center;
+                    right: 85px;
+                    @media (max-width: 768px) {
+                        right: 40px;
+                    }
+                }
+            }
+
+            label {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                width: 220px;
+                /* identical to box height */
+
+                color: #828282;
+            }
+
+            input:not([value=""]) {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                /* identical to box height */
+                color: $black;
+            }
+
+            input {
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                background: $primary;
+                border: 1px solid $white;
+                margin-left: 168px;
+                @media (max-width: 1199px) {
+                    margin-left: 160px;
+                }
+                @media (max-width: 991px) {
+                    margin-left: 141px;
+                }
+                @media (max-width: 767px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    @media (min-width: 576px) {
+        .sidebar {
+            margin-bottom: 0;
+        }
+    }
+    @media (min-width: 992px) {
+        .content {
+            .form-group {
+                display: flex;
+                align-items: center;
+                button {
+                    margin-left: 157px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        .content {
+            .form-group {
+                button {
+                    margin-left: 166px;
+                }
+            }
+        }
+    }
+}
